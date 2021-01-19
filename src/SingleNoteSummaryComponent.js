@@ -16,16 +16,17 @@ const SingleNoteSummaryComponent = (props) => {
             'done': false
         })
 */
-
         
     return (
         <View  backgroundColor='#FFF' style={styles.textViewStyle}>
             <CheckBox
                 value={props.myNoteDone}
-                onValueChange={console.log(props)}
+                onValueChange={
+                    console.log(props)
+                }
                 style={styles.checkbox}
             />
-            <Text style={styles.textProperties}> {props.myNoteText}</Text>
+            <Text style={styles.textProperties}> {props.myNoteText} </Text>
             <Icon 
                 name='trash-alt'
                 type='font-awesome-5'

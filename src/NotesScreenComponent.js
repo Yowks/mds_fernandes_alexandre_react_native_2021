@@ -20,6 +20,7 @@ const NotesScreenComponent = () => {
 
             const newDataList = _.map(completeNewData.val(), (value, key) => {
                 console.log("Value", value)
+                const Key = key;
                 console.log("Key", key)
                 return {...value}
             })
@@ -63,9 +64,9 @@ const NotesScreenComponent = () => {
                 }
             }
             numColumns={1}
-            renderItem={({item}) => {
+            renderItem={({item, index}) => {
                 // console.log(index, item)
-                return <SingleNoteSummaryComponent myNoteDate={item.date} myNoteText={item.text} myNoteDone={item.done}/>
+                return <SingleNoteSummaryComponent myNoteDate={item.date} myNoteText={item.text} myNoteDone={item.done} />
             }
             
         }   
